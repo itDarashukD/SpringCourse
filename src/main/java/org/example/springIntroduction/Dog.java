@@ -9,4 +9,10 @@ public class Dog implements Pet {
     public Dog() {
         System.out.println("пустой конструктор из Dog");
     }
+    public void init(){
+        System.out.println("init method from Dog");
+    }
+    public void destroy(){
+        System.out.println("destroy method from Dog");
+    }
 }

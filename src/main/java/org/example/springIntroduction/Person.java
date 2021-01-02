@@ -2,6 +2,8 @@ package org.example.springIntroduction;
 
 public class Person {
     private Pet pet;
+    private String name;
+    private int age;
 
 
     public Person() {
@@ -17,5 +19,23 @@ public class Person {
     public void callYourPet(){
         System.out.println("hello my dear pet!");
         pet.say();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        System.out.println("присваиваем имя" );
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        System.out.println("присваиваем возраст" );
+        this.age = age;
     }
 }

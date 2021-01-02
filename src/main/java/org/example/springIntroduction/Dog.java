@@ -6,4 +6,7 @@ public class Dog implements Pet {
         System.out.println("gav-gav");
     }
 
+    public Dog() {
+        System.out.println("пустой конструктор из Dog");
+    }
 }

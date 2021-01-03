@@ -1,6 +1,10 @@
 package org.example.springIntroduction;
 
+import org.springframework.stereotype.Component;
+
+ @Component("dog")
 public class Dog implements Pet {
+
     @Override
     public void say() {
         System.out.println("gav-gav");

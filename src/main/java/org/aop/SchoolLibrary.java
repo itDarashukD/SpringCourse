@@ -10,7 +10,7 @@ public class SchoolLibrary extends UniversityLibrary {
     }
 
     public void getMagazine() {
-        System.out.println("получаем Журнал из SchoolLibrary ");
+         System.out.println("получаем Журнал из SchoolLibrary ");
     }
 
 }

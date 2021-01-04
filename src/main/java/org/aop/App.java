@@ -11,7 +11,7 @@ public class App {
         UniversityLibrary universityLibrary = context.getBean("universityLibrary", UniversityLibrary.class);
         universityLibrary.getBook();
         universityLibrary.getMagazine();
-
+        universityLibrary.returnBook();
         context.close();
 
     }

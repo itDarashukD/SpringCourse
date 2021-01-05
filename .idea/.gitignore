@@ -1,0 +1,11 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+.iml
+.gitignore
+# Datasource local storage ignored files
+/../../../../../../../../../../../../:\Дима\IT\учебные пособия\Getting Started with Spring Boot\Working Files\Getting_Started_with_Spring_Boot_Working_Files\Getting Started with Spring Boot - Working Files\Chapter 12\SpringProject\SpringCourse\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+

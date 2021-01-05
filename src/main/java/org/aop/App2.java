@@ -10,13 +10,16 @@ public class App2 {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(AOPConfig.class);
 
-        University university = context.getBean("university",University.class);
+        University university = context.getBean("university", University.class);
 
-        university.addStudents();
-        List<Student> stList=university.getStudents();
-        System.out.println("fffffffffffffffffffff");
-        System.out.println(stList);
+        try {
+            university.addStudents();
+            List<Student> stList = university.getStudents();
 
+            System.out.println(stList);
+        } catch (Exception e) {
+            System.out.println("выброшено исключение " + e);
+        }
 
     }
 }

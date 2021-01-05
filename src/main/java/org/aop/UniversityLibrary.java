@@ -16,9 +16,9 @@ public class UniversityLibrary {
         System.out.println("_____________________________________");
     }
 
-    public void returnBook() {
+    public String  returnBook() {
         System.out.println("возвращаем книгу в UniversityLibrary");
-        System.out.println("_____________________________________");
+        return "Война и мир";
     }
 
     public void returnMagazine() {

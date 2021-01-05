@@ -21,8 +21,9 @@ public class University {
         studentList.add(student3);
     }
 
-    public List<Student> getStudents(){
-        System.out.println("инфо из метода getStudents()");
+    public List<Student> getStudents() {
+        System.out.println("старт метода getStudents()");
+        //   System.out.println(studentList.get(3));//сделали exception
         System.out.println(studentList);
 
         return studentList;

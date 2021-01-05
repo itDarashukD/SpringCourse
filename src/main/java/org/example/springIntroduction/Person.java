@@ -5,17 +5,17 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Person {
 
     private Pet pet;
-  //  @Value("${person.name}")
+   @Value("${person.name}")
     private String name;
- //   @Value("${person.age}")
+    @Value("${person.age}")
     private int age;
 
 
-    @Autowired //производим DI Бина person с Любым бином Типа PET,- это Cat и Dog
+//    @Autowired //производим DI Бина person с Любым бином Типа PET,- это Cat и Dog
     public Person(@Qualifier("cat") Pet pet) {
         System.out.println("конструктор Person");
         this.pet = pet;

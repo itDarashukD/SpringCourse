@@ -17,7 +17,7 @@ public class App {
 
             Session session = factory.getCurrentSession();
 
-            Employee employee = new Employee("Dzmitry", "Darashuk", "IT", 3500);
+            Employee employee = new Employee("Andrey", "Kizuk", "It Repair", 1000);
 
             session.beginTransaction();
             session.save(employee);
@@ -25,6 +25,7 @@ public class App {
         } finally {
             factory.close();
         }
+        System.out.println("Data was pushed to DB!");
 
     }
 }

@@ -10,7 +10,7 @@ public class Employee {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private int id;      
+    private int id;
     private String name;
     private String surname;
     private String department;

@@ -1,7 +1,4 @@
-package org.hibernateTest2.Entity;
-
-
-import org.hibernateTest2.Entity.Detail;
+package org.hibernate_one_to_many_bi_directional.Entity;
 
 import javax.persistence.*;
 
@@ -14,22 +11,16 @@ public class Employee {
     private int id;
     private String name;
     private String surname;
-    private String department;
     private int salary;
 
-    @OneToOne(cascade = CascadeType.ALL)    //связали 2 таблица по принципу одна к одной
-    // CascadeType-дефствия выполняемые с этой Табл - будут выполнены и со второй. Подходит к OnetoOne
-    @JoinColumn(name = "details_id")//указали вторичный ключ этой табл.этого К,HIB его свяжет с первичным табицы К.Detail
-    private Detail detail;
 
     public Employee() {
     }
 
-    public Employee(  String name, String surname, String department, int salary ) {
+    public Employee(  String name, String surname, int salary ) {
 
         this.name = name;
         this.surname = surname;
-        this.department = department;
         this.salary = salary;
 
     }
@@ -58,13 +49,6 @@ public class Employee {
         this.surname = surname;
     }
 
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
 
     public int getSalary() {
         return salary;
@@ -74,23 +58,13 @@ public class Employee {
         this.salary = salary;
     }
 
-    public Detail getDetail() {
-        return detail;
-    }
-
-    public void setDetail(Detail detail) {
-        this.detail = detail;
-    }
-
     @Override
     public String toString() {
         return "Employee{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", department='" + department + '\'' +
                 ", salary=" + salary +
-
                 '}';
     }
 }

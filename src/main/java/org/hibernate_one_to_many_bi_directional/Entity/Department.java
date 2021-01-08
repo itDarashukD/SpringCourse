@@ -17,8 +17,9 @@ public class Department {
     @Column(name = "min_salary")
     private int minSalary;
 
-    @OneToMany(cascade = CascadeType.ALL) //т.к.Департамент один, а работников много = @oneToMany
-    @JoinColumn(name = "department_id")
+
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "department",
+            fetch = FetchType.LAZY) //т.к.Департамент один, а работников много = @oneToMany
     private List<Employee>employeeList;
 
     public Department() {
@@ -36,7 +37,7 @@ public class Department {
             employeeList=new ArrayList<>();
              }
           employeeList.add(employee);
-
+        employee.setDepartment(this);
     }
 
     public int getId() {

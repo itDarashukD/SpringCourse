@@ -23,28 +23,38 @@ public class App {
             session.beginTransaction();// открываем новую сессию
 
 //            //Добавить в таблицу
-//             Department department = new Department("Builders",1000,500);
-//            Employee employee1 = new Employee("Andr","Grek",800 );
-//            Employee employee2 = new Employee("Alexander","Zakrevsky",850 );
+//           Department department = new Department("Aviators",500,300);
+//           Employee employee1 = new Employee("Vera","Petrova",350 );
+//            Employee employee2 = new Employee("Dzmitry","Loginov",450 );
+//            Employee employee3 = new Employee("Kola","Dovi",430 );
+//            Employee employee4 = new Employee("Kostia","Sake",450 );
 //
-//            department.addingToEmployeeList(employee1);
+//           department.addingToEmployeeList(employee1);
 //            department.addingToEmployeeList(employee2);
+//            department.addingToEmployeeList(employee3);
+//
 //
 //            session.save(department);
 
-//            //получить из таблицы
-//            Department department = session.get(Department.class,4);
+            //удалить
+
+//            //изменить департмент
+            Employee employee =session.get(Employee.class,7);
+            System.out.println(employee);
+            System.out.println("__________________________________________");
+            System.out.println(employee.getDepartment());
+//            Department department1=session.get(Department.class,6);
+//            employee.setDepartment(department1);
+
+
+//            System.out.println("get Department");
+//            Department department=session.get(Department.class,10);
+//
+//            System.out.println("show Department");
 //            System.out.println(department);
-//            System.out.println(department.getEmployeeList());
-
-              //удалить из таблицы
-//            //если удать работкина,то толькок он удалиться.т.к. у него нет ссылки на Департамент
-//            Employee employee = session.get(Employee.class,2);
-//            session.delete(employee);
-
-            //если удать Департамент,то  он удалит и работнка.т.к. у него есть ссылка на него
-//            Department department = session.get(Department.class,4);
-//            session.delete(department);
+//
+//            System.out.println("show Department workers");
+//            System.out.println(department.getEmployeeList() );
 
             session.getTransaction().commit();// закрываем новую сессию
             System.out.println("Data was pushed to DB!");
